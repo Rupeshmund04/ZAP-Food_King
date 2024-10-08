@@ -1,0 +1,695 @@
+<!-- Designed &  Developed By Rupesh Kumar Mund -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZAP-The Food King</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="icon" href="/favIcon_ZAP.png" type="image/x-icon">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">ZAP-The Food King</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">Restaurents</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dishes
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Chicken Biriyani</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Pizza</a>
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">White Sause Pasta</a></li>
+                <li><a class="dropdown-item" href="#">Burger</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search Dishes"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </form>
+        </div>
+        <div class="mx-2">
+          <button
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            Login
+          </button>
+          <button
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#signupModal"
+          >
+            SignUp
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Login to ZAP
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="eg.bunty12345@gmail.com"
+                  />
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Must be 8-20 Character"
+                  />
+                </div>
+                <div class="mb-3 form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                  />
+                  <label class="form-check-label" for="exampleCheck1"
+                    >remember me as login</label
+                  >
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-warning"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Get a ZAP Account
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    placeholder="eg. bunty12345@gmail.com"
+                  />
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    placeholder="Must be 8-20 Character"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="cfmexampleInputPassword1" class="form-label"
+                    >Confirm Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="cfmexampleInputPassword1"
+                    placeholder="Must be 8-20 Character"
+                  />
+                </div>
+                <button type="submit" class="btn btn-success">
+                  Create an Account
+                </button>
+                <p>OR</p>
+                <button type="button" class="btn btn-outline-danger">
+                  Continue with Google Account</button
+                ><br /><br />
+                <button type="button" class="btn btn-outline-primary">
+                  Continue with Microsoft Account
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-warning"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div style="height: 500px; overflow: hidden;">
+            <img src="/Img_Pizza1.jpg" class="d-block w-100" alt="Pizza" style="height: 100%; object-fit: cover;" />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Welcome to ZAP</h3>
+            <p>Pizza Perfection, One Slice at a time.</p>
+            <button class="btn btn-primary">Order Now</button>
+            <button class="btn btn-danger">Add To Cart</button>
+            <button class="btn btn-success">Get Receipe</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div style="height: 500px; overflow: hidden;">
+            <img src="/Img_Biriyani.jpg" class="d-block w-100" alt="Pizza" style="height: 100%; object-fit: cover;" />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Biriyani, Love At First Bite</h3>
+            <p>Restaurents - Bukhara, Barbeque Nation, Cafe Madras</p>
+            <button class="btn btn-success">Order Now</button>
+            <button class="btn btn-danger">Add to cart</button>
+            <button class="btn btn-warning">Details</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div style="height: 500px; overflow: hidden;">
+            <img src="/Img_Burger.jpg" class="d-block w-100" alt="Pizza" style="height: 100%; object-fit: cover;" />
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <div>
+              <h3>Burger</h3>
+              <big>Juicy, Stacked, and Totally Satisfying!</big>
+            </div>
+            <button class="btn btn-success">Order Now</button>
+            <button class="btn btn-primary">Add To Cart</button>
+            <button class="btn btn-danger">Chicken Burger</button>
+            <button class="btn btn-warning">Veg Burger</button>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hiddden="true"</span>
+    </div>
+    <!-- Carts -->
+    
+
+    <div class="album py-5 bg-body-tertiary">
+      <div class="container">
+  
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_Paneer.jpg" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Paneer Tikka Masala</h5>
+                <p class="card-text">Paneer Tikka Masala features grilled marinated paneer cubes in a rich, spiced tomato gravy. Creamy and flavorful, it’s a beloved vegetarian dish, perfect with naan or rice.</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_Pasta.jpg" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">White Sause Pasta</h5>
+                <p class="card-text">White Sauce Pasta features al dente pasta tossed in a rich, creamy béchamel sauce, infused with garlic and herbs. This comforting dish is indulgent and satisfying, making it a favorite for pasta lovers.</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_Burger.jpg" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Veg Burger</h5>
+                <p class="card-text">The Burger is a hearty classic featuring a juicy patty, perfectly grilled and served in a soft bun. Topped with fresh lettuce, tomatoes, and a choice of sauces, it offers a delicious blend of flavors and textures.</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_Biriyani.jpg" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Chicken Biriyani</h5>
+                <p class="card-text">
+                  Chicken Biryani is a flavorful and aromatic dish featuring tender marinated chicken layered with fragrant basmati rice. It offers a delightful combination of taste and texture.it’s a must-try for biryani lovers!</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_salad.jpg" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Vegetable Salad</h5>
+                <p class="card-text">
+                  The Salad is a crisp mix of fresh vegetables tossed in a light dressing. Bursting with flavor and nutrients, it’s a refreshing side or a healthy stand-alone option. The Salad features a vibrant mix of fresh veggies.</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_CB2.webp" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Chole Bhature</h5>
+                <p class="card-text">
+                  Chole Bhature is a popular North Indian dish featuring spicy chickpea curry served with deep-fried bread. This hearty meal is a perfect blend of flavors and textures, making it a beloved choice for breakfast or lunch!</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_salad.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">The Salad is a crisp mix of fresh vegetables tossed in a light dressing. Bursting with flavor and nutrients, it’s a refreshing side or a healthy stand-alone option. The Salad features a vibrant mix of fresh veggies.</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_Noodles.jpg" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Hakka Noodles</h5>
+                <p class="card-text">
+                  Hakka Noodles are a tasty Indo-Chinese dish made from stir-fried wheat noodles with vibrant vegetables and spices. This quick and flavorful meal is a favorite for any occasion!</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" >
+              <img src="/Img_Burger.jpg" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Chicken Burger</h5>
+                <p class="card-text">The Burger is a hearty classic featuring a juicy patty, perfectly grilled and served in a soft bun. Topped with fresh lettuce, tomatoes, and a choice of sauces, it offers a delicious blend of flavors and textures.</p>
+                <a href="#" class="btn btn-success stretched-link">Order Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">World</strong>
+              <h3 class="mb-0">Global Coding Conferene</h3>
+              <div class="mb-1 text-body-secondary">From Oct 4</div>
+              <p class="card-text mb-auto">
+                Get the basic idea of Coding conferences & contest.
+              </p>
+              <a href="#" class="stretched-link">Conferene Recording</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="thumb_1.jpeg"
+                alt=""
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Work</strong>
+              <h3 class="mb-0">Group Discussion & Team Work</h3>
+              <div class="mb-1 text-body-secondary">8th Dec</div>
+              <p class="mb-auto">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content.
+              </p>
+              <a href="#" class="stretched-link">Meeting Reports</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="thumb_2.jpg"
+                alt=""
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container my-4">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-warning">Coding</strong>
+              <h3 class="mb-0">Hackathons</h3>
+              <div class="mb-1 text-body-secondary">From Oct 4</div>
+              <p class="card-text mb-auto">
+                This section is about Hackathons where basically people or any
+                team build some amazing tech-product in the given time period.
+              </p>
+              <a href="#" class="stretched-link">Link to Github</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="thumb_3.jpeg"
+                alt=""
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Web-Development</strong>
+              <h3 class="mb-0">Learn Web-Designing</h3>
+              <div class="mb-1 text-body-secondary">8th Dec</div>
+              <p class="mb-auto">
+                Here we will explore the world of Web-designing & User
+                Interface.
+              </p>
+              <a href="#" class="stretched-link">Read More About front-end</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                src="thumb_4.jpeg"
+                alt=""
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Footer Section -->
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="d-block mb-2"
+            role="img"
+            viewBox="0 0 24 24"
+          >
+            <title>Product</title>
+            <circle cx="12" cy="12" r="10"></circle>
+            <path
+              d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"
+            ></path>
+          </svg>
+          <small class="d-block mb-3 text-body-secondary">© 2024–Present</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Browse Restaurents</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Menu Highlights</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Special Offers</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Reservation System</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Blog & Recipes</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Customer Support</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Delivery Information</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Cuisine Types</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Indian</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Italian</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Chinese</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#">Vegan & Vegetarian</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Company</h5>
+          <ul class="list-unstyled text-small">
+            <li>
+              <a class="link-secondary text-decoration-none" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Our Team</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#"
+                >Partner With Us</a
+              >
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <a class="link-secondary text-decoration-none" href="#">Terms of Services</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div class="container">
+      <footer class="container">
+        <p class="float-end">
+          <a href="#"><button class="btn btn-primary">Back to Top</button></a>
+        </p>
+        <p>
+          © 2024-present ZAP, Inc. · <a href="#">Privacy</a> ·
+          <a href="#">Terms</a>
+        </p>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
